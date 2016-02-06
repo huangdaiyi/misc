@@ -1,0 +1,13 @@
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.UI.exe.config
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\rulesSheet.xml
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.UI.exe
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.UI.pdb
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\obj\Debug\Frank.Task1.UI.csprojResolveAssemblyReference.cache
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\obj\Debug\Frank.Task1.UI.exe
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\obj\Debug\Frank.Task1.UI.pdb
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.Business.dll
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.Model.dll
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.XmlDataAccess.dll
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.Business.pdb
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.Model.pdb
+c:\users\fz46\documents\visual studio 2012\Projects\NewEggTask\Frank.Task1.UI\Frank.Task1.UI\bin\Debug\Frank.Task1.XmlDataAccess.pdb

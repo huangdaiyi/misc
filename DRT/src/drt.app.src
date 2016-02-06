@@ -1,0 +1,14 @@
+{application, drt, [
+	{description, "DFIS daily report tool"},
+	{vsn, "0.1.1"},
+	{modules, []},
+	{registered, [drt_sup]},
+	{applications, [
+		kernel,
+		stdlib,
+		cowboy,
+		xmerl
+	]},
+	{mod, {drt_app, []}},
+	{env, []}
+]}.

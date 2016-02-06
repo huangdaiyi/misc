@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>番茄工作法</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.skin-container{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -10;
+		background: url(image/bg.jpg) no-repeat fixed center 0;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		zoom: 1;
+	}
+</style>
+</head>
+<body>
+<div class="skin-container">
+	<nav class="navbar navbar-default" role="navigation">
+    	<div class="container">
+    		<div class="navbar-header">
+      			<a class="navbar-brand"  href="#">
+       				 <img alt="Brand" style="height:30px" src="image/log.png">
+     			 </a>
+    		</div>
+    	<ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Link1</a></li>
+	        <li><a href="#">Link2</a></li>
+	        <li><a href="#">Link3</a></li>
+        </ul>
+  		</div>
+  		
+	</nav>
+	<div class="container">
+		 <div class="row">
+		 	<div class="col-md-3">
+		 		
+		 	</div>
+		 	<div class="col-md-6">
+		 		<span class="label label-primary">当前进行番茄</span>
+		 		<div class="input-group">
+					<span class="input-group-addon">@</span>
+					<div class="form-control" placeholder="Username"></div>
+				</div>
+		 		<div class="progress">
+					    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+					   		<span class="sr-only">60% Complete</span>
+					    </div>
+				</div>
+		 	</div>
+		 	<div class="col-md-3"></div>
+		 </div>
+	</div>
+</div>
+</body>
+</html>

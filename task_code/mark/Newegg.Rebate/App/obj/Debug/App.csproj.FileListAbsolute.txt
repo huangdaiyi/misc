@@ -1,0 +1,8 @@
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\bin\Debug\App.exe.config
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\bin\Debug\App.exe
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\bin\Debug\App.pdb
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\bin\Debug\Newegg.Rebate.dll
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\bin\Debug\Newegg.Rebate.pdb
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\obj\Debug\App.csprojResolveAssemblyReference.cache
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\obj\Debug\App.exe
+c:\users\mj30\documents\visual studio 2012\Projects\Newegg.Rebate\App\obj\Debug\App.pdb

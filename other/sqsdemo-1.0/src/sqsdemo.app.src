@@ -1,0 +1,15 @@
+%% -*- erlang -*-
+{application, sqsdemo,
+ [{description, "sqsdemo"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'sqsdemo_app', []}},
+  {env, [
+        {sqs, {"AKIAIP4T4Y5F2DBCKZVA", "1RsvWchQ9eKLZo9OicRFZ85CmWsSrJCkT0SzmO9U", "sqs.ap-southeast-1.amazonaws.com"}},
+        {dynamodb, {"AKIAIP4T4Y5F2DBCKZVA", "1RsvWchQ9eKLZo9OicRFZ85CmWsSrJCkT0SzmO9U", "dynamodb.ap-southeast-1.amazonaws.com"}},
+        {sss, {"AKIAIP4T4Y5F2DBCKZVA", "1RsvWchQ9eKLZo9OicRFZ85CmWsSrJCkT0SzmO9U"}}
+        %%{sss, {"AKIAIZDC4BOD2FILMJMA ", "8WUJz/tZVYC8oThtGK9wy5WDyCnX8xC7tfvSnQ7q"}}
+
+    ]},
+  {applications, [kernel, stdlib, crypto]}]}.

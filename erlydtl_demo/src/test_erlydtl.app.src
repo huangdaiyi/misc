@@ -1,0 +1,12 @@
+{application, test_erlydtl,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { test_erlydtl_app, []}},
+  {env, []}
+ ]}.

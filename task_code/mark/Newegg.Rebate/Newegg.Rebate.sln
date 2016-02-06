@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Rebate", "Newegg.Rebate\Newegg.Rebate.csproj", "{CA6CCE9C-9CAE-42AA-9ECB-7CB86CCA906D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{EB227FD6-0412-4430-A6F9-F6BFAF104096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA6CCE9C-9CAE-42AA-9ECB-7CB86CCA906D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6CCE9C-9CAE-42AA-9ECB-7CB86CCA906D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6CCE9C-9CAE-42AA-9ECB-7CB86CCA906D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6CCE9C-9CAE-42AA-9ECB-7CB86CCA906D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB227FD6-0412-4430-A6F9-F6BFAF104096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB227FD6-0412-4430-A6F9-F6BFAF104096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB227FD6-0412-4430-A6F9-F6BFAF104096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB227FD6-0412-4430-A6F9-F6BFAF104096}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

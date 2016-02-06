@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>chat room</title>
+ <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+ <style type="text/css">
+    div.msg-header{
+      width: 640px;
+      margin: 20px auto;
+    }
+
+    div.msgs-wrap {
+      letter-spacing: 1px;
+      word-wrap: break-word;
+      border: 1px solid #ddd;
+    }
+    h4{
+      background: #ddd;
+       margin: 0px;
+    }
+     div.msgs-wrap ul{
+      height: 300px;
+      overflow-y:auto;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+     }
+
+  div.input-wrap,
+  div.msgs-wrap {
+    width: 680px;
+    margin: 10px auto;
+  }
+
+  div.input-wrap textarea {
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    resize: none;
+    overflow-y:auto;
+  }
+
+  div.input-wrap input{
+    float: right;
+    padding: 2 35px;
+    font-size: 16px;
+    margin: 5px 25px 0 0;
+  }
+
+
+   #msgs li label{
+     color:#666;
+     font-size: 12px;
+     margin: 2px 0;
+     padding-left: 10px;
+   }
+   #msgs li p{
+      font-size: 14px;
+      color:#000;
+      margin:0; 
+      padding-left: 20px;
+  }
+ </style>
+</head>
+<body>
+      <div class="msg-header">
+        <label for="txtName">Input your name:<input type="text" id="txtName" name="txtName"  /></label>  
+        <button id="connect">Connect</button> 
+        <span id = "conntip"></span>
+      </div>
+      <div class="msgs-wrap">
+       <h4>Messages</h4>
+       <ul id = "msgs"></ul>
+      </div>
+     <div class="input-wrap" >
+        <h4>Input</h4> 
+        <textarea  id="message" name="message" ></textarea> 
+         <input id ='send' type="button" value="Send" disabled="disabled"  />
+     </div> 
+
+   
+    <script type="text/javascript">
+      (function($){
+        chatClient = {
+          
+          identify  :null,
+          username  :null,
+          messagebox:null,
+          sendbutton:null,
+          inputbox  :null,
+
+          messageFormat:function(msg){
+              var msg = msg|| $.trim(this.inputbox.val());
+              return (this.identify+"|"+this.username+"|"+ msg);
+          },
+
+          getMessageHeight:function(msgbox){
+              var total =0;
+              msgbox.children("li").each(function(){
+                  total += $(this).outerHeight();
+              });
+              return total;
+          },
+
+          get: function(){
+             var that = this;
+              $.ajax({
+                      type: "GET",
+                      url: "chat?g="+that.getRandom(),
+                      cache:false,
+                      dataType:"json",
+                      success:that.show,
+                      complete:function(XMLHttpRequest, textStatus){
+                        //console.log(textStatus);
+                        that.get();
+                      }
+                    });
+             },
+
+          send :function(){
+                var that = chatClient,
+                 clientmsg =  $.trim(that.inputbox.val());
+                 if (!!!clientmsg) {
+                   return;
+                 }
+              
+                $.ajax({
+                      type: "POST",
+                      url: "chat?p="+Math.random(),
+                      cache:false,
+                      dataType:"json",
+                      data: "message="+ that.messageFormat(clientmsg),
+                      success: function(msg){
+                          console.log("send success!");
+                          that.inputbox.val("");
+                      }
+                  }); 
+              } ,
+
+          show : function(data){
+              //console.log("show!"+JSON.stringify(data));
+              //var wrap = wrap || "msgs"; 
+               var that = chatClient,st=0;
+                if (data.type==="ok") {
+                   var msgs = data.message.split("|");
+                   if (msgs.length >=3){
+                    var msg = "";
+                       for (var i =2; i < msgs.length; i++) {
+                         msg+= msgs[i];
+                       }
+                    var $msgbox =  that.messagebox;
+                      $msgbox.append("<li><label>[" + new Date().toLocaleString()+ 
+                       (msgs[0]===that.identify?"] Your send:</label><p>" :
+                        "] Receive from"+msgs[1]+":</label><p>")+ msg+"</p></li>");
+                       //message scroll
+                       that.getMessageHeight($msgbox)> $msgbox.height() &&
+                        (st =$msgbox.scrollTop(),$msgbox.scrollTop(st+=$msgbox.children().last().outerHeight()));
+                                                
+                    }
+                 }
+          },
+
+          getRandom:function(){
+            return Math.random().toString(36).substring(2);
+          },
+
+          init:function(username,inputbox,sendbutton,messagebox) {
+
+             console.log("init called!");
+             this.username = username;
+             this.identify = this.getRandom();
+             this.inputbox = inputbox||$("#message");
+             this.sendbutton=sendbutton|| $("#send");
+             this.messagebox = messagebox||$("#msgs");
+             this.get();
+             this.sendbutton.on("click",this.send);
+
+             $(window).on("keydown",function(event){
+               if( event.keyCode ===13) {
+                chatClient.sendbutton.trigger("click");
+               }
+             });
+             
+          }     
+       };
+
+      function disable(bol){
+          $("#txtName").prop("disabled",bol);
+          $("#connect").prop("disabled",bol);
+          $("#send").prop("disabled",!bol);
+      }
+
+      $("#connect").on("click",function(){
+         
+         try
+         {
+            var $txtName =$("#txtName"),
+             $tip = $("#conntip");
+
+            var username =$.trim($txtName.val());
+            if (username||username.length<1)
+             {
+                $tip.html("Fail,your name are incorrect!");
+                $txtName.focus();
+                return;
+             }
+            if (username.length>10) {
+              $tip.html("Fail,Your name are too long!");
+                $txtName.focus();
+                return;
+            }; 
+
+            disable(true);
+            chatClient.init(username);
+            $tip.html("Success! Your name are <b>"+username+"</b>");
+            $(this).off("click");
+         }
+         catch(e)
+         {
+             console.log(e.name+":"+e.message);
+             disable(false);
+         }
+
+         
+       });
+      
+      })(jQuery);
+</script>
+</body>
+</html>

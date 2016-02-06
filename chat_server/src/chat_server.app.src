@@ -1,0 +1,9 @@
+%% -*- erlang -*-
+{application, chat_server,
+ [{description, "chat_server"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'chat_server_app', []}},
+  {env, []},
+  {applications, [kernel, stdlib, crypto]}]}.

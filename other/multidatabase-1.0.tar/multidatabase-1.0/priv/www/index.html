@@ -1,0 +1,44 @@
+<html ng-app='chronos'>
+<head>
+    <meta charset="utf-8">
+    <title>chronos -  tomato time method</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Example page header <small>multi-database</small></h1>
+      </div>
+        <div ng-controller="SimulatorController">
+          <button ng-click="adduser()">Add User</button>
+          <button ng-click="loadusers()">Load Users</button>
+          <button ng-click="clearusers()">Clear Users</button>
+          <table  class="table table-bordered table-striped">
+          <thead>
+            <tr><td>index</td><td>id</td><td>database</td><td>region</td></tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="user in users">
+            <td>{{$index + 1}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.database}}</td>
+            <td>{{user.region}}</td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+    </div>
+
+    <script src="js/controller.js"></script>
+</body>
+</html>

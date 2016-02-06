@@ -1,0 +1,9 @@
+%% -*- erlang -*-
+{application, pomodoro,
+ [{description, "pomodoro"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'pomodoro_app', []}},
+  {env, []},
+  {applications, [kernel, stdlib, crypto]}]}.

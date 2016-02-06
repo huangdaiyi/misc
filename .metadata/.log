@@ -1,0 +1,64 @@
+!SESSION 2015-10-14 15:50:23.170 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.131
+!MESSAGE System property http.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.135
+!MESSAGE System property http.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.136
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.136
+!MESSAGE System property https.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.138
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-14 15:51:04.138
+!MESSAGE System property https.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-10-14 15:51:26.311
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\hh49'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-01-08 09:25:17.456 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.586
+!MESSAGE System property http.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.607
+!MESSAGE System property http.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.608
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.608
+!MESSAGE System property https.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.610
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-08 09:26:05.610
+!MESSAGE System property https.proxyPort is not set but should be 3128.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-08 09:26:18.137
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\hh49'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

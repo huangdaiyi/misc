@@ -1,0 +1,11 @@
+%% -*- erlang -*-
+{application, multidatabase,
+ [{description, "multidatabase"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'multidatabase_app', []}},
+  {env, [
+    {dynamodb, {"AKIAIP4T4Y5F2DBCKZVA", "1RsvWchQ9eKLZo9OicRFZ85CmWsSrJCkT0SzmO9U", "dynamodb.ap-southeast-1.amazonaws.com"}}
+  ]},
+  {applications, [kernel, stdlib, crypto]}]}.

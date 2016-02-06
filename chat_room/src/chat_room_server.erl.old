@@ -1,0 +1,58 @@
+-module (chat_room_server).
+-behaviour(gen_server).
+
+
+-define (SERVER, ?MODULE).
+-record (message, {user,messages[]).
+%%API
+-export ([start_link/0,add/2,delete/1,find/1]).
+
+%% gen_server callbacks
+-export ([init/1,handle_call/3,handle_cast/2,handle_info/2,terminate/2,code_change/3]).
+
+start_link() ->
+ 	    gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
+
+
+add(Key, Value)->
+ 		gen_server:call(?SERVER,{add,Key,Value}).
+
+delete(Key) ->
+  		gen_server:call(?SERVER,{delete,Key})
+
+
+find(Key) ->
+		gen_server:call(?SERVER,{find,Key}).
+
+
+
+
+init([]) ->
+ 		{ok, dict:new()}.
+
+
+handle_call({add, Key, Value}, _From , Dict) ->
+		Reply = dict:store(Key, Value, Dict),
+		{reply, ok, Reply};
+
+handle_call({find , Key} , _From , Dict) ->
+		Reply = dict:find(Key, Dict),
+		{reply, Reply, Dict};
+
+handle_call({delete,Key},_From,Dict) ->	
+    	Reply = dict:erase(Key,Dict),
+    	{reply, ok, Reply}.
+
+handle_cast(_Info,State) ->
+		{noreply, State}.
+
+handle_info(_Info,State) ->
+		{noreply, State}.
+
+terminate(_Reason,_State) -> 
+		ok.
+
+code_change(_Oldvsn,State,Extra) ->
+		{ok,State}.
+
+

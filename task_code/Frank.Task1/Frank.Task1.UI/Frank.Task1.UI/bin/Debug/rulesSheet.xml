@@ -1,0 +1,8 @@
+<root>
+  <rules>
+   <rule type="one" Desc="按照数量返利，每采购1个商品，供应商会给我们$5.86的返利" minNum="0" signalProfile="5.86" />
+	 <rule type="two" Desc="按照数量返利，当采购商品的数量大于等于100的时候才能够获取返利，并且每个返利$8.5" minNum="100" signalProfile="8.5" />
+	 <rule type="three" Desc="按照金额返利，按照采购金额的10.5%返利" minMoney="0" profilePercent="0.105" />
+	 <rule type="four" Desc="按照金额返利，当采购金额超过$200的时候才能够有返利，返利按照采购金额的20.8%收取" minMoney="300" profilePercent="0.208" />
+  </rules>
+</root>
