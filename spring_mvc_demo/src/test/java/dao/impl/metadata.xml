@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="rootMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testRootId" />
+		<property name="parentId" value="" />
+		<property name="name" value="testOwner" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testOwnerOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+	<bean id="firstLevelMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testFirstLevelId" />
+		<property name="parentId" value="testRootId" />
+		<property name="name" value="testFirstLevelName" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testFirstLevelOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+	<bean id="secondLevelMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testSecondLevelId" />
+		<property name="parentId" value="testFirstLevelId" />
+		<property name="name" value="testSecondLevelName" />
+		<property name="folder" value="false" />
+		<property name="originName" value="testSecondLevelOriginName" />
+		<property name="blockId" value="testSecondLevelBlockId" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+		<property name="type" value="normal" />
+	</bean>
+
+</beans>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- <bean id="createCollaborateRequest" class="model.request.CreateCollaborateRequest"> 
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" /> <property 
+		name="token" value="8d6cd606ddb2d0fc7a07f1d2364061033e3aa9e2" /> <property 
+		name="name" value="sharefolder_o21895" /> <property name="members"> <list> 
+		<ref bean="collaborateMember" /> </list> </property> </bean> -->
+	<bean id="transformCollaborateRequest" class="model.request.CreateCollaborateRequest">
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="token" value="8d6cd606ddb2d0fc7a07f1d2364061033e3aa9e2" />
+		<property name="path" value="normalfolder/sharefolder_o21895/subfoder" />
+	</bean>
+
+	<bean id="collaborateMember" class="model.CollaborateMember">
+		<property name="accepted" value="true" />
+		<property name="nickname" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="email" value="pan03@gmail.com" />
+		<property name="photoBlockId" value="d8e8fca2dc0f896fd7cb4cb0031ba249" />
+		<property name="photoSize" value="1024" />
+		<property name="cellphones">
+			<list>
+				<ref bean="cellPhones" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="cellPhones" class="model.CellPhone">
+		<property name="cellphone" value="0929226977" />
+		<property name="countryCode" value="886" />
+	</bean>
+	
+	<bean id="pathInfo" class="model.PathInfo">
+		<property name="userId" value="testUserId" />
+		<property name="ownerId" value="testUserId" />
+		<property name="fullOriginPath" value="testUserId/normalfolder/sharefolder_o21895" />
+		<property name="fullOwnerPath" value="testUserId/normalfolder/sharefolder_o21895" />
+	</bean>
+
+	<bean id="shareMetadata" class="model.Metadata">
+		<property name="sharedRootId" value="collaborate1" />
+	</bean>
+	<bean id="normalMetadata" class="model.Metadata">
+		<property name="sharedRootId" value="" />
+	</bean>
+	<bean id="originMetadata" class="model.Metadata">
+		<property name="id" value="sharefolder_o21895" />
+		<property name="parentId" value="normalfolder" />
+		<property name="originName" value="sharefolder_o21895" />
+		<property name="name" value="sharefolder_o21895" />
+		<property name="folder" value="true" />
+		<property name="sharedRootId" value="" />
+		<property name="type" value="normal" />
+	</bean>
+	<bean id="parentMetadata" class="model.Metadata">
+		<property name="id" value="normalfolder" />
+		<property name="parentId" value="testUserId" />
+		<property name="name" value="normalfolder" />
+		<property name="folder" value="true" />
+		<property name="sharedRootId" value="" />
+		<property name="type" value="normal" />
+	</bean>
+	<bean id="subMetadata" class="model.Metadata">
+		<property name="id" value="subfoder" />
+		<property name="parentId" value="sharefolder_o21895" />
+		<property name="name" value="subfoder" />
+		<property name="folder" value="true" />
+		<property name="sharedRootId" value="sharedRootId" />
+		<property name="type" value="share" />
+	</bean>
+	
+	<bean id="collaborateFolder" class="model.Metadata">
+		<property name="id" value="collaborate1" />
+		<property name="parentId" value="" />
+		<property name="createdBy" value="testOwnerId" />
+		<property name="ownerId" value="testOwnerId" />
+		<property name="sharedRootId" value="" />
+	</bean>
+</beans>

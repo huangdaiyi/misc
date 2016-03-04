@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="normalFolderPathRequestBase" class="model.PathRequestBase">
+		<property name="token" value="testToken" />
+		<property name="userId" value="testUserId" />
+		<property name="deviceId" value="testDeviceId" />
+		<property name="path" value="Aaa/Bbb.jpg" />
+		<property name="sourcePath" value="" />
+	</bean>
+	<bean id="syncFolderPathRequestBase" class="model.PathRequestBase">
+		<property name="token" value="testToken" />
+		<property name="userId" value="testUserId" />
+		<property name="deviceId" value="testDeviceId" />
+		<property name="path" value="my device sync folders/testDeviceId/Aaa/Bbb.jpg" />
+		<property name="sourcePath" value="" />
+		<property name="ownerId" value="testOwnerId" />
+	</bean>
+	<bean id="syncFolderPathRequestBaseWithSourcePath" class="model.PathRequestBase">
+		<property name="token" value="testToken" />
+		<property name="userId" value="testUserId" />
+		<property name="deviceId" value="testDeviceId" />
+		<property name="path" value="my pictures/Bbb.jpg" />
+		<property name="sourcePath" value="my device sync folders/testDeviceId/Aaa/Bbb.jpg" />
+		<property name="ownerId" value="testOwnerId" />
+	</bean>
+	<bean id="sharedFolderPathRequestBase" class="model.PathRequestBase">
+		<property name="token" value="testToken" />
+		<property name="userId" value="testUserId" />
+		<property name="deviceId" value="testDeviceId" />
+		<property name="path" value="my sharing center/testShare/Aaa/Bbb.jpg" />
+		<property name="sourcePath" value="" />
+		<property name="SharedRootId" value="SharedRootId" />
+		<property name="ownerId" value="testOwnerId" />
+	</bean>
+	<bean id="normalMetadta" class="model.Metadata">
+		<property name="type" value="normal" />
+	</bean>
+	
+</beans>

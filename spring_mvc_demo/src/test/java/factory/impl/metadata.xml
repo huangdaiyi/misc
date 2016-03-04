@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="fileMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testFileId" />
+		<property name="parentId" value="testFileParentId" />
+		<property name="name" value="testFileName" />
+		<property name="folder" value="false" />
+		<property name="originName" value="testFileOriginName" />
+		<property name="blockId" value="testFileBlockId" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+		<property name="type" value="normal" />
+	</bean>
+	<bean id="folderMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testFolderId" />
+		<property name="parentId" value="testFolderParentId" />
+		<property name="name" value="testFolderName" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testFolderOriginName" />
+		<property name="blockId" value="testFolderBlockId" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+		<property name="type" value="normal" />
+	</bean>
+
+</beans>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="rootMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testRootId" />
+		<property name="parentId" value="" />
+		<property name="name" value="testOwner" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testOwnerOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+	<bean id="firstLevelFolderMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testFirstLevelId" />
+		<property name="parentId" value="testRootId" />
+		<property name="name" value="testFirstLevelName" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testFirstLevelOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+	<bean id="firstLevelFileMetadataToAdd" class="model.Metadata">
+		<property name="id" value="testFirstLevelId" />
+		<property name="parentId" value="testRootId" />
+		<property name="name" value="testFirstLevelName" />
+		<property name="folder" value="false" />
+		<property name="originName" value="testFirstLevelOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+	<bean id="getFolderRequest" class="model.request.GetFolderRequest">
+		<property name="userId" value="testUserId" />
+		<property name="path" value="" />
+		<property name="pageNumber" value="2" />
+		<property name="itemsPerPage" value="3" />
+	</bean>
+	<bean id="createLinkFileRequest" class="model.request.UpdateFileRequest">
+		<property name="token" value="8d6cd606ddb2d0fc7a07f1d2364061033e3aa9e2" />
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="deviceUid" value="fc879f12e9cb524a85daf20ffd52a35a" />
+		<property name="ownerId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="path" value="My Device Sync Folders/fc879f12e9cb524a85daf20ffd52a35a/test/test91.jpg" />
+		<property name="size" value="10" />
+		<property name="blockId" value="d8e8fca2dc0f896fd7cb4cb0031ba249" />
+	</bean>
+	<bean id="deleteLinkFileRequest" class="model.PathRequestBase">
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="path" value="My Pictures/test91.jpg" />
+		<property name="sourcePath" value="My Device Sync Folders/fc879f12e9cb524a85daf20ffd52a35a/test/test91.jpg" />
+	</bean>
+	<bean id="linkFolderRequest" class="model.PathRequestBase">
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="path" value="My Device Sync Folders/fc879f12e9cb524a85daf20ffd52a35a/test" />
+	</bean>
+	<bean id="unlinkFolderRequest" class="model.PathRequestBase">
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="path" value="My Device Sync Folders/fc879f12e9cb524a85daf20ffd52a35a/test" />
+	</bean>
+	<bean id="getSubBackupFolderCount" class="model.PathRequestBase">
+		<property name="userId" value="0f55586ebdb9b3de820092f74aa5ba78" />
+		<property name="path" value="my document" />
+		<property name="owner_id" value="" />
+	</bean>
+</beans>

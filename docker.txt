@@ -1,0 +1,228 @@
+[hardy@scmesos06 ~]$ history
+    1  ls
+    2  sudo docker ps
+    3  pwd
+    4  ls
+    5  sudo docker ps
+    6  sudo docker imagaes
+    7  sudo docker images
+    8  sudo docker run -d -p 8303:8303 10.16.83.52:5000/ddrt_20151013   /bin/sh -c "/ddrt/start.sh"
+    9  sudo docker ps
+   10  sudo docker ps -a
+   11  sudo docker inspect --format "{{ .State.Pid }}" 533228b60334
+   12  sudo nsenter --target 15462 --mount --uts --ipc --net --pid
+   13  sudo docker ps
+   14  sudo docker stop 533228b60334
+   15  sudo docker start 533228b60334
+   16  ls
+   17  sudo docker ps
+   18  sudo docker ps -a
+   19  sudo docker images
+   20  sudo docker ps -q
+   21  sudo docker ps -a
+   22  docker inspect -f   '{{.Id}}' d8e703d7e303
+   23  sudo docker inspect -f   '{{.Id}}' d8e703d7e303
+   24  sudo docker inspect -f   '{{.Id}}' 533228b60334
+   25  cd /var/lib/docker/
+   26  sudo cd /var/lib/docker/
+   27  sudo cd /var/lib/docker
+   28  sudo cd /var/lib
+   29  cd /
+   30  cd var/lib/
+   31  ls
+   32  cd docker
+   33  sudo dokcer
+   34  sudo cd dokcer
+   35  sudo cd docker
+   36  cd docker
+   37  ll
+   38  cd ~
+   39  touch test.txt
+   40  ls
+   41  sudo cp test.txt /var/lib/docker/aufs/mnt/**533228b603345742a9ebc1c71588ba20e1d9aeff7839d6110ad746f636059150**/root/test.txt
+   42  sudo cp ./test.txt /var/lib/docker/aufs/mnt/**533228b603345742a9ebc1c71588ba20e1d9aeff7839d6110ad746f636059150**/root/test
+   43  sudo cp ./test.txt /var/lib/docker/aufs/mnt/533228b603345742a9ebc1c71588ba20e1d9aeff7839d6110ad746f636059150/root/
+   44  cd ls
+   45  ls
+   46  sudo docker ps
+   47  sudo docker images
+   48  ls
+   49  cd /
+   50  ls
+   51  sudo docker ps
+   52  sudo docker inspect -f   '{{.Id}}' 533228b60334
+   53  sudo docker inspect --format "{{ .State.Pid }}" 533228b60334
+   54  sudo nsenter --target 15680 --mount --uts --ipc --net --pid
+   55  cd ~
+   56  ls
+   57  unzip ddrt.zip
+   58  ls
+   59  cd ddrt/
+   60  ls
+   61  history
+   62  sudo docker build - help
+   63  sudo docker build --help
+   64  sudo docker build  -t -f ./Dockerfile
+   65  sudo docker images
+   66  sudo docker build   -f ./Dockerfile  -t 10.16.83.52:5000/ddrt_2015-10-11
+   67  sudo docker build -f ./Dockerfile  -t 10.16.83.52:5000/ddrt_2015-10-11
+   68  sudo docker build ./Dockerfile  -t 10.16.83.52:5000/ddrt_2015-10-11
+   69  sudo docker build -t Dockerfile  -t 10.16.83.52:5000/ddrt_2015-10-11
+   70  sudo docker build .
+   71  sudo docker ps
+   72  sudo docker images
+   73  sudo docker rmi  fa2308abd2a7
+   74  sudo docker images
+   75  sudo docker build . -t 10.16.83.52:5000/ddrt_20151106
+   76  sudo docker build -t 10.16.83.52:5000/ddrt_20151106 .
+   77  sudo docker ps -a
+   78  sudo docker stop 533228b60334
+   79  sudo docker images
+   80  sudo docker run -d -p 8303:8303 10.16.83.52:5000/ddrt_20151106 /bin/sh -c "/ddrt/start.sh"
+   81  sudo docker ps
+   82  sudo docker logs 2ecbfd986e3ee81f706
+   83  sudo docker rm 2ecbfd986e3ee81f706
+   84  sudo docker run -d -p 8303:8303 10.16.83.52:5000/ddrt_20151106 /bin/sh
+   85  sudo docker ps
+   86  sudo docker logs c69664c5f
+   87  sudo docker ps
+   88  sudo docker ps -a
+   89  sudo docker rm c69664c5f
+   90  sudo docker ps
+   91  sudo docker run -it 10.16.83.52:5000/ddrt_20151106 /bin/sh
+   92  sudo docker ps -a
+   93  sudo docker rm df30e6dfdcdc
+   94  sudo docker run -d -p 8303:8303  10.16.83.52:5000/ddrt_20151106   /bin/sh -c "./start.sh"
+   95  sudo docker ps
+   96  sudo docker
+   97  sudo docker logs 6f0affa055b0
+   98  sudo docker run -idt  10.16.83.52:5000/ddrt_20151106   /bin/sh
+   99  sudo docker ps -a
+  100  sudo docker attach 6d771ff9721e
+  101  ls
+  102  cd ../
+  103  ls
+  104  cd ddrt
+  105  ls
+  106  sudo rm ./start.sh
+  107  sudo vi start.sh
+  108  sudo docker ps
+  109  sudo docker attach 6d771ff9721e
+  110  sudo docker run -it  10.16.83.52:5000/ddrt_20151106   /bin/sh
+  111  ls
+  112  sudo vi start.sh
+  113  ls
+  114  cd ../
+  115  sudo chmod +x start.sh
+  116  ls
+  117  sudo chmod +x /ddrt/start.sh
+  118  cd ddrt/
+  119  ls
+  120  sudo chmod +x start.sh
+  121  ls
+  122  sudo ./start.sh
+  123  erl
+  124  cd config/
+  125  ls
+  126  sudo vi sys.config
+  127  ls
+  128  cd ../
+  129  cd ~
+  130  sudo docker ps
+  131  sudo docker images
+  132  sudo docker rmi 10.16.83.52:5000/ddrt_20151106
+  133  sudo docker ps -a
+  134  sudo docker rm 0ddaef22e8d9 6d771ff9721e 6f0affa055b0
+  135  sudo docker rmi 10.16.83.52:5000/ddrt_20151106
+  136  ls
+  137  sudo docker images
+  138  sudo docker run -it 10.16.83.52:5000/ddrt_20151013   /bin/sh
+  139  ls
+  140  sudo docker run -it 10.16.83.52:5000/ddrt_2015-10-11  /bin/sh
+  141  ls
+  142  sudo docker ps -a
+  143  sudo docker rm 0e9c7d6fc000 a3da4a644f03
+  144  ls
+  145  sudo docker build -t  10.16.83.52:5000/ddrt_20151016 ./ddrt/
+  146  sudo docker images
+  147  sudo docker run -d -p 8303:8303 --name ddrt_20151016 10.16.83.52:5000/ddrt_20151016  /bin/sh -c "/ddrt/start.sh"
+  148  sudo docker ps
+  149  sudo docker ps -a
+  150  sudo docker ps
+  151  sudo docker ps -a
+  152  sudo docker images
+  153  sudo docker rmi 10.16.83.52:5000/ddrt_2015-10-11
+  154  sudo docker ps -a
+  155  sudo docker rmi 10.16.83.52:5000/ddrt_2015-10-11
+  156  sudo docker images
+  157  sudo docker rmi 10.16.83.52:5000/ddrt_20151013
+  158  sudo docker ps
+  159  sudo docker inspect --format "{{ .State.Pid }}" 2d7933f40c88
+  160  sudo nsenter --target 2582 --mount --uts --ipc --net --pid
+  161  sudo docker stop  2d7933f40c88
+  162  sudo docker start  2d7933f40c88
+  163  sudo docker stop  2d7933f40c88
+  164  sudo docker start  2d7933f40c88
+  165  sudo docker inspect --format "{{ .State.Pid }}" 2d7933f40c88
+  166  sudo nsenter --target 14054 --mount --uts --ipc --net --pid
+  167  sudo docker stop  2d7933f40c88
+  168  sudo docker start  2d7933f40c88
+  169  sudo docker stop  2d7933f40c88
+  170  ls
+  171  cd ddrt/
+  172  unzip ebin.zip
+  173  ls
+  174  ls -l ebin
+  175  ls
+  176  rm ebin.zip
+  177  cd ../
+  178  ls
+  179  history
+  180  sudo docker build  --help
+  181  sudo docker images
+  182  sudo docker build  --help
+  183  sudo docker build -t 10.16.83.52:5000/ddrt_2015-11-13 ./ddrt
+  184  sudo docker images
+  185  sudo docker rmi  d409aa72c008
+  186  sudo docker build -t 10.16.83.52:5000/ddrt_20151113 ./ddrt
+  187  sudo docker run -d -p 8303:8303 --name ddrt_20151113 10.16.83.52:5000/ddrt_20151113   /bin/sh -c "/ddrt/start.sh"
+  188  sudo docker images
+  189  sudo docker ps  -a
+  190  sudo docker rm 2d7933f40c88
+  191  sudo docker rm  533228b60334
+  192  sudo docker ps  -a
+  193  sudo docker images
+  194  sudo docker ps
+  195  sudo docker images
+  196  sudo docker tag  f616b6aa17f5 docker.neg/base
+  197  sudo docker images
+  198  sudo docker rmi 10.16.83.52:5000/ddrt_2015-10-11
+  199  sudo docker images
+  200  sudo docker tag  f616b6aa17f5 docker.neg/ddrt_base
+  201  sudo docker rmi docker.neg/base
+  202  sudo docker images
+  203  sudo docker ps -a
+  204  sudo docker ps
+  205  sudo docker images
+  206  sudo docker -rm 10.16.83.52:5000/ddrt_20151013
+  207  sudo docker -rmi 10.16.83.52:5000/ddrt_20151013
+  208  sudo docker -rmi 10.16.83.52:5000/ddrt_20151013
+  209  sudo docker rmi 10.16.83.52:5000/ddrt_20151013
+  210  docker images
+  211  sudo docker images
+  212  sudo docker ps -a
+  213  ls
+  214  sudo docker ps
+  215  sudo docker inspect --format "{{ .State.Pid }}" 4559275eff80
+  216  sudo nsenter --target 18093 --mount --uts --ipc --net --pid
+  217  ls
+  218  sudo docker stop 4559275eff80
+  219  sudo docker start 4559275eff80
+  220  ls
+  221  sudo dokcer ps
+  222  sudo docker ps
+  223  sudo docker stop 4559275eff80
+  224  sudo docker start 4559275eff80
+  225  ls
+  226  sudo docker ps
+  227  history

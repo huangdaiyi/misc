@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="createCollaborateRequest" class="model.request.CreateCollaborateRequest">
+		<property name="userId" value="c03aef6a-8786-432f-9932-604091833521" />
+		<property name="token" value="8d6cd606ddb2d0fc7a07f1d2364061033e3aa9e2" />
+		<property name="name" value="sharefolder_o21895" />
+		<property name="members">
+			<list>
+				<ref bean="collaborateMember" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="collaborateMember" class="model.CollaborateMember">
+		<property name="nickname" value="randy" />
+		<property name="email" value="pan03@gmail.com" />
+		<property name="photoBlockId" value="d8e8fca2dc0f896fd7cb4cb0031ba249" />
+		<property name="photoSize" value="1024" />
+		<property name="cellphones">
+			<list>
+				<ref bean="cellPhone" />
+				<ref bean="cellPhone2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="cellPhone" class="model.CellPhone">
+		<property name="cellphone" value="0919894766" />
+		<property name="countryCode" value="886" />
+	</bean>
+	<bean id="cellPhone2" class="model.CellPhone">
+		<property name="cellphone" value="0919894767" />
+		<property name="countryCode" value="886" />
+	</bean>
+	
+	<bean id="collaborateFolder" class="model.Metadata">
+		<property name="id" value="testRootId" />
+		<property name="parentId" value="" />
+		<property name="name" value="testOwner" />
+		<property name="folder" value="true" />
+		<property name="originName" value="testOwnerOriginName" />
+		<property name="blockId" value="" />
+		<property name="ownerId" value="testOwner" />
+		<property name="fullSourcePath" value="" />
+		<property name="deviceUid" value="" />
+	</bean>
+</beans>
